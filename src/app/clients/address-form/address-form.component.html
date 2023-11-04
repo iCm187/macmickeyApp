@@ -1,0 +1,38 @@
+<div class="address-form">
+  <form (ngSubmit)="addUserAddress()">
+    <!-- Champ pour la ligne d'adresse 1 -->
+    <div class="form-group">
+      <label for="addressLine1">Adresse Ligne 1</label>
+      <input type="text" id="addressLine1" [(ngModel)]="address.addressLine1" name="addressLine1" class="form-control" required>
+    </div>
+
+    <!-- Champ pour la ligne d'adresse 2 -->
+    <div class="form-group">
+      <label for="addressLine2">Adresse Ligne 2</label>
+      <input type="text" id="addressLine2" [(ngModel)]="address.addressLine2" name="addressLine2" class="form-control">
+    </div>
+
+    <!-- Champ pour la ville -->
+    <div class="form-group">
+      <label for="city">Ville</label>
+      <input type="text" id="city" [(ngModel)]="address.city" name="city" class="form-control" required>
+    </div>
+
+    <!-- Champ pour le code postal -->
+    <div class="form-group">
+      <label for="postalCode">Code Postal</label>
+      <input type="text" id="postalCode" [(ngModel)]="address.postalCode" name="postalCode" class="form-control" required>
+    </div>
+
+    <!-- Liste déroulante pour les pays -->
+    <div class="form-group">
+      <label for="country">Pays</label>
+      <select id="country" [(ngModel)]="address.country" name="country" class="form-control" required>
+        <option *ngFor="let country of countries" [value]="country.name">{{ country.name }}</option>
+      </select>
+    </div>
+
+    <!-- Bouton pour soumettre le formulaire -->
+    <button type="submit" class="btn btn-primary">Ajouter Adresse</button>
+  </form>
+</div>

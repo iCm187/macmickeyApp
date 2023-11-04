@@ -1,0 +1,18 @@
+<div *ngIf="orderClientCurrent; else noOrder">
+  <h2>Détails de la Commande</h2>
+  <div class="order-details">
+    <p><strong>ID de la Commande :</strong> {{ orderClientCurrent.orderID }}</p>
+    <p><strong>État de la Commande :</strong> {{ orderClientCurrent.orderState }}</p>
+    <p><strong>Date de Création :</strong> {{ orderClientCurrent.creationDateTime | date:'dd/MM/yyyy HH:mm:ss' }}</p>
+    <p><strong>Dernière Modification :</strong> {{ orderClientCurrent.lastModifiedDateTime | date:'dd/MM/yyyy HH:mm:ss' }}</p>
+    <p><strong>ID du Client :</strong> {{ orderClientCurrent.clientID }}</p>
+    <p *ngIf="orderClientCurrent.orderDetails">
+      <strong>Détails de la Commande :</strong> {{ orderClientCurrent.orderDetails }}
+    </p>
+    <p *ngIf="!orderClientCurrent.orderDetails">Aucun détail fourni.</p>
+  </div>
+</div>
+
+<ng-template #noOrder>
+  <p>Commande non trouvée.</p>
+</ng-template>
