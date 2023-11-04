@@ -7,14 +7,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 // Services
-import { AddressService } from './services/address.service';
-import { CountryService } from './services/country.service';
-import { ClientService } from './services/clients.service';
-import { OrderService } from './services/orders.service';
-import { ProductService } from './services/products.service';
 import {CommonModule} from "@angular/common";
 import { NavbarComponent } from './navbar/navbar.component';
 import {ClientsModule} from "./clients/clients.module";
+import {ProductsModule} from "./products/products.module";
 
 @NgModule({
   declarations: [
@@ -28,14 +24,10 @@ import {ClientsModule} from "./clients/clients.module";
     FormsModule,
     ReactiveFormsModule,
     ClientsModule,
-    CommonModule
+    CommonModule,
+    ProductsModule
   ],
   providers: [
-    AddressService,
-    ClientService,
-    CountryService,
-    OrderService,
-    ProductService
   ],
   bootstrap: [AppComponent]
 })

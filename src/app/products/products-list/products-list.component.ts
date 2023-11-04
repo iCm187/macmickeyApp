@@ -9,9 +9,10 @@ import { Router } from "@angular/router";
   styleUrls: ['./products-list.component.css']
 })
 export class ProductsListComponent implements OnInit {
-  productsList: Product[] = [];
+  productsList: Product[] =[] ;
 
   constructor(private productService: ProductService, private router: Router) {}
+
 
   ngOnInit(): void {
     this.productService.getAllProduct()
@@ -36,4 +37,5 @@ export class ProductsListComponent implements OnInit {
   selectProduct(product: Product) {
     this.router.navigate(['/produits/liste-produits', product.productID]);
   }
+
 }

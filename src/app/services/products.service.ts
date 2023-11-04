@@ -8,8 +8,7 @@ import { Product } from '../../app/products/product.model';
   providedIn: 'root'
 })
 export class ProductService extends ApiService {
-  private url='https://macmickey.azurewebsites.net/Address';
-
+  private url = `${this.BASE_URL}/Product`;
   constructor(private http: HttpClient) {
     super();
   }

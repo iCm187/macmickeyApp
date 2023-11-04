@@ -8,8 +8,7 @@ import { Client } from '../../app/clients/client.model';
   providedIn: 'root'
 })
 export class ClientService extends ApiService {
-  private url='https://macmickey.azurewebsites.net/Address';
-
+  private url = `${this.BASE_URL}/Client`;
   constructor(private http: HttpClient) {
     super();
   }
