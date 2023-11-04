@@ -1,0 +1,64 @@
+.address-form {
+  max-width: 400px; /* Limite la largeur du formulaire */
+  margin: 20px auto; /* Centre le formulaire sur la page avec un peu de marge */
+  padding: 20px;
+  background-color: #f9f9f9; /* Couleur de fond pour le formulaire */
+  border: 1px solid #ddd; /* Bordure autour du formulaire */
+  border-radius: 4px; /* Arrondit les coins de la bordure */
+}
+
+.address-form .form-group {
+  margin-bottom: 15px; /* Espacement entre les champs du formulaire */
+}
+
+.address-form .form-group label {
+  display: block;
+  margin-bottom: 5px; /* Petit espace entre le label et le champ de saisie */
+  color: #333; /* Couleur du texte pour les labels */
+}
+
+.address-form .form-control {
+  width: 100%; /* Utilise toute la largeur disponible */
+  padding: 8px 12px; /* Padding intérieur pour les champs */
+  font-size: 14px; /* Taille de la police pour les champs */
+  line-height: 1.5;
+  color: #555; /* Couleur du texte pour les champs */
+  background-color: #fff; /* Couleur de fond pour les champs */
+  border: 1px solid #ccc; /* Bordure des champs */
+  border-radius: 4px; /* Arrondit les coins des champs de saisie */
+  box-shadow: inset 0 1px 3px rgba(0,0,0,.1); /* Ombre intérieure légère pour un effet de profondeur */
+}
+
+.address-form .form-control:focus {
+  border-color: #66afe9; /* Change la couleur de la bordure lors de la mise au point */
+  outline: 0; /* Supprime l'outline par défaut */
+  box-shadow: inset 0 1px 3px rgba(0,0,0,.1), 0 0 8px rgba(102,175,233,.6); /* Ajoute une ombre extérieure pour mettre en évidence */
+}
+
+.address-form .btn-primary {
+  color: #fff; /* Texte blanc pour le bouton */
+  background-color: #337ab7; /* Couleur de fond pour le bouton */
+  border-color: #2e6da4; /* Couleur de la bordure du bouton */
+  padding: 10px 15px; /* Padding pour le bouton */
+  font-size: 16px; /* Taille de la police pour le bouton */
+  border-radius: 4px; /* Arrondit les coins du bouton */
+  cursor: pointer; /* Change le curseur en main lors du survol */
+  margin-top: 10px; /* Marge au-dessus du bouton */
+}
+
+.address-form .btn-primary:hover,
+.address-form .btn-primary:focus {
+  background-color: #286090; /* Assombrit le bouton lors du survol ou du focus */
+  border-color: #204d74; /* Change la couleur de la bordure lors du survol ou du focus */
+}
+
+/* Gestion de l'aspect des champs en état d'erreur après validation, si nécessaire */
+.address-form .form-control.ng-invalid.ng-touched {
+  border-color: #a94442; /* Bordure rouge pour les champs invalides */
+  background-color: #f2dede; /* Fond rouge clair pour les champs invalides */
+}
+
+.address-form .form-control.ng-valid.ng-touched {
+  border-color: #3c763d; /* Bordure verte pour les champs valides */
+  background-color: #dff0d8; /* Fond vert clair pour les champs valides */
+}

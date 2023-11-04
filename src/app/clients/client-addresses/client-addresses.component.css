@@ -1,0 +1,30 @@
+h2 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 0.5rem; /* Add some space below the heading */
+}
+
+ul {
+  list-style: none; /* Remove the default list style */
+  padding: 0; /* Remove default padding */
+  margin: 0; /* Remove default margin */
+}
+
+li {
+  background-color: #f8f9fa; /* Light grey background for each list item */
+  border: 1px solid #e1e1e1; /* Add a subtle border */
+  border-radius: 4px; /* Slightly round the corners of the border */
+  padding: 0.75rem; /* Add some padding inside each list item */
+  margin-bottom: 0.5rem; /* Add space between list items */
+  transition: background-color 0.2s; /* Smooth transition for hover effect */
+}
+
+li:hover {
+  background-color: #e9ecef; /* Slightly darken the item on hover */
+}
+
+/* Optional: Style for when there's an additional detail like an empty state */
+li:empty:before {
+  content: "No address provided.";
+  color: #6c757d; /* Muted text color to indicate an empty list item */
+}

@@ -1,0 +1,58 @@
+/* Style for the main product details title */
+h2 {
+  font-size: 24px; /* Size of the main title */
+  color: #333; /* Dark color for the text for better readability */
+  margin-bottom: 10px; /* Space below the title */
+}
+
+/* Container for the product details */
+.details-container {
+  background-color: #f8f8f8; /* Light grey background */
+  border-radius: 8px; /* Rounded corners */
+  padding: 20px; /* Padding inside the container */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+  margin-top: 20px; /* Margin at the top of the container */
+}
+
+/* Style for the product name which is also an h2 element */
+.details-container > h2 {
+  color: #1a5a96; /* Distinct color for the product name */
+  font-size: 20px; /* Slightly smaller than the main title */
+  margin-top: 0; /* No margin at the top to stay close to the container's start */
+}
+
+/* Paragraph styles for product details */
+.details-container > p {
+  color: #555; /* Dark grey color for the paragraph text */
+  line-height: 1.5; /* Spacing between lines for readability */
+  margin-bottom: 8px; /* Space below each paragraph */
+}
+
+/* Highlight for the unit price to draw attention */
+.details-container > p:nth-of-type(1) {
+  font-size: 18px; /* Larger font size for the price */
+  color: #d14d42; /* A color that stands out for the price information */
+  font-weight: bold; /* Bold font for emphasis */
+}
+
+/* Style for when the product description is not available */
+.details-container > p:nth-of-type(2):empty:before {
+  content: 'Aucune description disponible.'; /* Placeholder text */
+  color: #999; /* Muted color for placeholder */
+  font-style: italic; /* Italicize the placeholder text */
+}
+
+/* Style for the product stockpile information */
+.details-container > p:nth-of-type(3) {
+  color: #28a745; /* A positive, reassuring color indicating availability */
+}
+
+/* Style for the 'Product not found' message */
+.product-not-found {
+  color: #dc3545; /* Color indicating an error or important notice */
+  text-align: center; /* Center the text within the div */
+  padding: 20px; /* Padding for aesthetic spacing */
+  border: 1px solid #dc3545; /* Border to emphasize the message box */
+  border-radius: 8px; /* Rounded corners to match the container */
+  margin-top: 20px; /* Consistent spacing from the top element */
+}

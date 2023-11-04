@@ -1,0 +1,85 @@
+/* Style for the main title of the products list */
+h2 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 20px; /* Adds space between the title and the content below */
+}
+
+/* Confirmation message styling */
+.confirmation-message {
+  background-color: #e9ffe9; /* Light green background for success messages */
+  color: #28a745; /* Dark green text to match the success theme */
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #d4edda; /* Subtle border color */
+  margin-bottom: 20px; /* Space after the message */
+}
+
+/* Product list container styling */
+.product-list {
+  display: flex;
+  flex-wrap: wrap; /* Allows products to wrap into the next row */
+  gap: 20px; /* Adds a gap between the product cards */
+}
+
+/* Product card styling */
+.product-list > div {
+  border: 1px solid #ddd; /* Light border for each product */
+  border-radius: 8px; /* Rounded corners for the card */
+  padding: 15px;
+  width: calc(33.333% - 20px); /* Three items per row with gap adjustment */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+}
+
+/* Style for product name */
+h3 {
+  color: #1a5a96; /* Primary color for product name */
+  margin-top: 0; /* Adjusts the margin at the top of the card */
+  margin-bottom: 8px; /* Space below the product name */
+}
+
+/* Style for price and stock */
+.product-list p {
+  margin-bottom: 8px; /* Consistent margin for all paragraphs */
+}
+
+/* Bold and colored price */
+.product-list p:nth-of-type(1) {
+  font-size: 18px;
+  color: #d14d42; /* Highlighting color for price */
+  font-weight: bold;
+}
+
+/* Quantity selector styling */
+app-quantity-selector {
+  margin-bottom: 8px; /* Space below the quantity selector */
+}
+
+/* Style for the 'Confirm order' button */
+.product-list button {
+  background-color: #007bff; /* Bootstrap primary button color */
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s; /* Smooth transition for button interaction */
+}
+
+/* Hover effect for the button */
+.product-list button:hover {
+  background-color: #0056b3; /* Darken button color on hover */
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .product-list > div {
+    width: calc(50% - 20px); /* Two items per row on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .product-list > div {
+    width: 100%; /* One item per row on very small screens */
+  }
+}

@@ -1,0 +1,59 @@
+h2 {
+  font-size: 2rem; /* Make the header larger and more prominent */
+  color: #333; /* A darker color for better readability */
+  margin-bottom: 1rem; /* Add some space below the header */
+}
+
+/* General styles for all tables within client data */
+.client-table,
+.address-table {
+  width: 100%; /* Full width tables */
+  border-collapse: collapse; /* Collapse borders */
+  margin-bottom: 1rem; /* Space after the table */
+}
+
+.client-table th,
+.client-table td,
+.address-table th,
+.address-table td {
+  border: 1px solid #ddd; /* A light border for table cells */
+  padding: 8px; /* Padding for cell content */
+  text-align: left; /* Align text to the left */
+}
+
+/* Header styles for tables */
+.client-table th,
+.address-table th {
+  background-color: #f4f4f4; /* A light background color for headers */
+  color: #333; /* Dark color for text in headers */
+  font-weight: bold; /* Make header text bold */
+}
+
+/* Style for the inner address table to distinguish it from the outer table */
+.address-table {
+  background-color: #fafafa; /* A slight variation in background color */
+  margin-top: 0.5rem; /* Top margin for spacing */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* A subtle shadow to lift the table off the page */
+}
+
+.address-table th {
+  background-color: #e8e8e8; /* A slightly darker background for the address table headers */
+}
+
+/* Style for a row when hovering over it to increase interactivity */
+.address-table tr:hover {
+  background-color: #f0f0f0; /* Highlight row on hover */
+}
+
+/* If there is no secondary address, style the 'Aucun' differently */
+.address-table td:empty:before {
+  content: 'Aucun'; /* Default text for empty cells */
+  color: #999; /* Muted text color */
+  font-style: italic; /* Italicize 'Aucun' */
+}
+
+/* Styles for the paragraph when client data is not available */
+p {
+  color: #cc0000; /* A noticeable color indicating an issue or lack of data */
+  font-style: italic; /* Italicize the text for emphasis */
+}

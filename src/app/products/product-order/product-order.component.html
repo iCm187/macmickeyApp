@@ -7,7 +7,6 @@
 <div class="product-list">
   <div *ngFor="let product of productsOrderList" [ngClass]="getProductCardClass(product)">
     <h3>{{ product.name }}</h3>
-    <p>Prix unitaire: {{ product.unitPrice }} euro</p>
     <p><strong>Prix unitaire :</strong> {{ product.unitPrice }} euro</p>
     <p><strong>Quantité en stock :</strong> {{ product.stockpiled }}</p>
 

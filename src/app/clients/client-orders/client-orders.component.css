@@ -1,0 +1,36 @@
+.order-details {
+  background-color: #f9f9f9; /* A light background to highlight the order details */
+  border: 1px solid #e1e1e1; /* A subtle border around the details */
+  border-radius: 5px; /* Slightly rounded corners */
+  padding: 20px; /* Space inside the box */
+  margin-top: 20px; /* Space above the box */
+}
+
+.order-details h2 {
+  color: #333; /* Dark color for the heading for contrast against the light background */
+  margin-bottom: 15px; /* Extra space below the heading */
+}
+
+.order-details p {
+  color: #555; /* Slightly lighter text for readability */
+  line-height: 1.6; /* Space between lines for readability */
+  margin-bottom: 10px; /* Space between paragraphs */
+}
+
+.order-details p strong {
+  color: #000; /* Dark color for emphasis */
+  margin-right: 5px; /* Space after the strong element */
+}
+
+/* Specific style for when there are no details */
+.order-details p:last-child {
+  color: #999; /* A muted color if there's no detail */
+  font-style: italic; /* Italicize the text for a different look to show it's a status message */
+}
+
+/* Style for the message when there is no order */
+#noOrder p {
+  color: #cc0000; /* Color to indicate an alert or warning */
+  font-weight: bold; /* Bold text for emphasis */
+  text-align: center; /* Center-align the text */
+}

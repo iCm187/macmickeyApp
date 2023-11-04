@@ -1,0 +1,69 @@
+/* Base styling for the page */
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* Style for the main title of the products list */
+h2 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 20px; /* Adds space between the title and the content below */
+}
+
+/* Product list container styling */
+.product-list {
+  display: flex;
+  flex-wrap: wrap; /* Allows products to wrap into the next row */
+  gap: 20px; /* Adds a gap between the product cards */
+  margin-bottom: 20px; /* Space before the potential message about empty product list */
+}
+
+/* Product card styling */
+.product-list > div {
+  border: 1px solid #ddd; /* Light border for each product */
+  border-radius: 8px; /* Rounded corners for the card */
+  padding: 15px;
+  width: calc(33.333% - 20px); /* Three items per row with gap adjustment */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+  cursor: pointer; /* Indicates the card is clickable */
+  transition: transform 0.2s ease, box-shadow 0.2s ease; /* Smooth transition for interaction */
+}
+
+/* Interaction styles for product card */
+.product-list > div:hover {
+  transform: translateY(-5px); /* Slightly lifts the card on hover */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Enhances shadow on hover */
+}
+
+/* Style for product name */
+h3 {
+  color: #1a5a96; /* Primary color for product name */
+  margin-top: 0; /* Adjusts the margin at the top of the card */
+  margin-bottom: 8px; /* Space below the product name */
+}
+
+/* Style for unit price */
+.product-list p {
+  font-weight: bold;
+  color: #555;
+  margin-bottom: 0; /* Removes the bottom margin for a compact look */
+}
+
+/* Style for the 'No products available' message */
+.product-list + p {
+  color: #999;
+  text-align: center; /* Centers the text in the container */
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .product-list > div {
+    width: calc(50% - 20px); /* Two items per row on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .product-list > div {
+    width: 100%; /* One item per row on very small screens */
+  }
+}
